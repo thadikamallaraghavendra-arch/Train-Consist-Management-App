@@ -1,12 +1,25 @@
-public class TrainConsistSearch {
+import java.util.Arrays;
 
-    // Linear Search Method
-    public static boolean linearSearch(String[] bogieIds, String key) {
+public class TrainConsistBinarySearch {
 
-        for (int i = 0; i < bogieIds.length; i++) {
+    // Binary Search Method
+    public static boolean binarySearch(String[] bogieIds, String key) {
 
-            if (bogieIds[i].equals(key)) {
-                return true; // ✅ Found → Early stop
+        int low = 0;
+        int high = bogieIds.length - 1;
+
+        while (low <= high) {
+
+            int mid = (low + high) / 2;
+
+            int result = key.compareTo(bogieIds[mid]);
+
+            if (result == 0) {
+                return true; // ✅ Found
+            } else if (result < 0) {
+                high = mid - 1; // search left
+            } else {
+                low = mid + 1; // search right
             }
         }
 
@@ -15,14 +28,17 @@ public class TrainConsistSearch {
 
     public static void main(String[] args) {
 
-        // Step 1: Unsorted bogie IDs
-        String[] bogieIds = {"B102", "A215", "C309", "D450", "B678"};
+        // Step 1: Sorted bogie IDs (IMPORTANT)
+        String[] bogieIds = {"A215", "B102", "B678", "C309", "D450"};
+
+        // (Optional safety) ensure sorted
+        Arrays.sort(bogieIds);
 
         // Step 2: Search key
         String searchKey = "C309";
 
         // Step 3: Perform search
-        boolean found = linearSearch(bogieIds, searchKey);
+        boolean found = binarySearch(bogieIds, searchKey);
 
         // Step 4: Display result
         if (found) {
