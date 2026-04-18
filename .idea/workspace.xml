@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="975c67d4-7e25-4c80-ba13-eb920fbdaf52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/App/src/TrainConsistManagementApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/App/src/TrainConsistManagementApp.java" afterDir="false" />
-    </list>
+    <list default="true" id="975c67d4-7e25-4c80-ba13-eb920fbdaf52" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "UC16-safe",
+    "git-widget-placeholder": "UC17-names",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/RAGHAVA/OneDrive/Desktop/RA2411003012069/Train-Consist-Management-App"
   }
