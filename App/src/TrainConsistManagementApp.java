@@ -1,20 +1,42 @@
-public class TrainConsistApp {
+class TrainConsistSorter {
+
+    // Bubble Sort Method
+    public static void bubbleSort(int[] capacities) {
+        int n = capacities.length;
+
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+
+                if (capacities[j] > capacities[j + 1]) {
+                    // Swap
+                    int temp = capacities[j];
+                    capacities[j] = capacities[j + 1];
+                    capacities[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    // Utility to print array
+    public static void printArray(int[] arr) {
+        for (int val : arr) {
+            System.out.print(val + " ");
+        }
+        System.out.println();
+    }
+
+    // Main Method
     public static void main(String[] args) {
 
-        try {
-            PassengerBogie b1 = new PassengerBogie("Sleeper", 72);
-            System.out.println(b1.getType() + " - " + b1.getCapacity());
+        // Example input
+        int[] capacities = {72, 56, 24, 70, 60};
 
-            PassengerBogie b2 = new PassengerBogie("AC Chair", -10); // Exception
+        System.out.print("Before Sorting: ");
+        printArray(capacities);
 
-        } catch (InvalidCapacityException e) {
-            System.out.println(e.getMessage());
-        }
+        bubbleSort(capacities);
 
-        try {
-            PassengerBogie b3 = new PassengerBogie("First Class", 0); // Exception
-        } catch (InvalidCapacityException e) {
-            System.out.println(e.getMessage());
-        }
+        System.out.print("After Sorting: ");
+        printArray(capacities);
     }
 }
