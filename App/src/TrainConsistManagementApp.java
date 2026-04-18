@@ -1,42 +1,19 @@
-class TrainConsistSorter {
+public class TrainConsistApp {
 
-    // Bubble Sort Method
-    public static void bubbleSort(int[] capacities) {
-        int n = capacities.length;
-
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-
-                if (capacities[j] > capacities[j + 1]) {
-                    // Swap
-                    int temp = capacities[j];
-                    capacities[j] = capacities[j + 1];
-                    capacities[j + 1] = temp;
-                }
-            }
-        }
-    }
-
-    // Utility to print array
-    public static void printArray(int[] arr) {
-        for (int val : arr) {
-            System.out.print(val + " ");
-        }
-        System.out.println();
-    }
-
-    // Main Method
     public static void main(String[] args) {
 
-        // Example input
-        int[] capacities = {72, 56, 24, 70, 60};
+        // ✅ Safe Case
+        GoodsBogie b1 = new GoodsBogie("Cylindrical");
+        b1.assignCargo("Petroleum");
 
-        System.out.print("Before Sorting: ");
-        printArray(capacities);
+        // ❌ Unsafe Case
+        GoodsBogie b2 = new GoodsBogie("Rectangular");
+        b2.assignCargo("Petroleum");
 
-        bubbleSort(capacities);
+        // ✅ Program continues
+        GoodsBogie b3 = new GoodsBogie("Rectangular");
+        b3.assignCargo("Food");
 
-        System.out.print("After Sorting: ");
-        printArray(capacities);
+        System.out.println("Program continues successfully...");
     }
 }
