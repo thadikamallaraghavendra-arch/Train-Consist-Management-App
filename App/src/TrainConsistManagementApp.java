@@ -1,19 +1,19 @@
-public class TrainConsistApp {
+import java.util.Arrays;
+
+public class TrainConsistSorter {
 
     public static void main(String[] args) {
 
-        // ✅ Safe Case
-        GoodsBogie b1 = new GoodsBogie("Cylindrical");
-        b1.assignCargo("Petroleum");
+        // Step 1: Create array of bogie names
+        String[] bogieNames = {"Sleeper", "AC Chair", "First Class", "General", "Luxury"};
 
-        // ❌ Unsafe Case
-        GoodsBogie b2 = new GoodsBogie("Rectangular");
-        b2.assignCargo("Petroleum");
+        // Before sorting
+        System.out.println("Before Sorting: " + Arrays.toString(bogieNames));
 
-        // ✅ Program continues
-        GoodsBogie b3 = new GoodsBogie("Rectangular");
-        b3.assignCargo("Food");
+        // Step 2: Sort using built-in method
+        Arrays.sort(bogieNames);
 
-        System.out.println("Program continues successfully...");
+        // After sorting
+        System.out.println("After Sorting: " + Arrays.toString(bogieNames));
     }
 }
